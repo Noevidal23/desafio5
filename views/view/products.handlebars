@@ -1,0 +1,27 @@
+<h1>Productos</h1>
+<a href="/">Nuevo Producto</a>
+{{#if this.inventario}}
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        {{#each this.productos}}
+        <tr>
+            <th>{{nombre}}</th>
+            <th>{{precio}}</th>
+            <th><img src="{{url}}"></th>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
+{{else}}
+<h1>No hay productos disponibles</h1>
+{{/if}}
